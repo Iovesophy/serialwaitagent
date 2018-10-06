@@ -1,5 +1,5 @@
-#serialwaitagent
-Serial communication agent.  
+#serialwaitagent  
+Serial communication agent program.  
 
 このプログラムはRaspberry PiからArduinoへシリアル通信を複数のプログラムから実行時、衝突回避を行うプログラムです。  
 python3系で動きます。  
