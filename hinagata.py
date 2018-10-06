@@ -7,12 +7,12 @@ import time
 class WaitAgent():
 
     def my_status_set(self):
-        w_file = open('test',mode='w')
+        w_file = open('/home/user/test/status.st',mode='w')
         w_file.write("1")
         w_file.close()
     def status_check(self):
         for i in range(count):
-            r_file = open('test')
+            r_file = open('/home/user/test/status.st')
             r_status = r_file.read()
             status = int(r_status)
             if status == 1:
@@ -33,12 +33,21 @@ class WaitAgent():
             elif status == 5:
                 print("]5: process.")
                 time.sleep(3)
+            elif status == 6:
+                print("]6: process.")
+                time.sleep(3)
+            elif status == 7:
+                print("]7: process.")
+                time.sleep(3)
+            elif status == 8:
+                print("]8: process.")
+                time.sleep(3)
             else:
                 print("]Else process.")
                 time.sleep(3)
     def status_fin(self):
         print("status_fin")
-        w_file = open('test')
+        w_file = open('/home/user/test/status.st')
         w_file.write("0")
         w_file.close()
 

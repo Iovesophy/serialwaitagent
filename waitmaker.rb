@@ -55,7 +55,7 @@ if SEP == "y"
         else
             code.puts "            elif status == #{i+1}:"
             code.puts "                print(\"]#{i+1}: process.\")"
-	    code.puts "                time.sleep(#{WAIT})"
+            code.puts "                time.sleep(#{WAIT})"
         end
     end
 end  
