@@ -2,6 +2,7 @@
 You can use Arduino serial communication when multi serial communication.  
 
 このプログラムはArduinoとRaspberry Piとのシリアル通信を複数のプログラムから実行時、衝突回避を行うプログラムです。  
+python3系で動きます。  
 
 ユーザの必要に応じて自由にカスタムしたコードを生成することができます。  
 
@@ -26,4 +27,4 @@ ruby waitmaker.rb
 また、区分けしたい数を入力すれば、その数だけ区分け処理コードが生成されます、選択しなければ生成されません。  
 手動で行いたい場合はsample.pyを参考にしてください。  
   
-Iovesophy.  
+odenn.  

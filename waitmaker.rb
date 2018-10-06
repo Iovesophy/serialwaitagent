@@ -1,6 +1,6 @@
 # coding: utf-8
 system("touch hinagata.py")
-puts "serialwaitagentMaker. このプログラムはあなたのステータス設定ファイルを自動生成できます. happy coding!! by Iovesophy."
+puts "serialwaitagentMaker. このプログラムはあなたのステータス設定ファイルを自動生成できます. happy coding!! by odenn."
 puts "数字は全て半角数字で入力してください。"
 puts "設定スタート:"
 puts "このプログラム自身のステータスナンバーを入力してください、ただし、他のプログラムステータスナンバーと同じナンバーは使わないでください。."
@@ -26,7 +26,7 @@ end
 File.open("hinagata.py","w") do |code|
 
 	code.puts "# -*- coding: utf-8 -*-"
-	code.puts "# serialwaitagentprocessor made by Iovesophy --"
+	code.puts "# serialwaitagentprocessor made by odenn --"
 	code.puts ""
 	code.puts "import serial"
 	code.puts "import time"

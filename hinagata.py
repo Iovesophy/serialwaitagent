@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# serialwaitagentprocessor made by Iovesophy --
+# serialwaitagentprocessor made by odenn --
 
 import serial
 import time
