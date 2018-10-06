@@ -1,5 +1,5 @@
 # serialwaitagent
-You can use Arduino serial communication when multi serial communication.  
+Arduino multi serial communication.  
 
 このプログラムはArduinoとRaspberry Piとのシリアル通信を複数のプログラムから実行時、衝突回避を行うプログラムです。  
 python3系で動きます。  
