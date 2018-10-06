@@ -2,7 +2,7 @@
 Serial communication agent program.  
 
 このプログラムはシリアル通信可能なコンピュータ(Raspberry PiとArduino UNOで検証済み)へ通信を複数のプログラムから実行時、衝突回避を行うプログラムです。  
-python3系で動きます。  
+python3系で実行可能です。  
 
 ユーザの必要に応じて自由にカスタムしたコードを生成することができます。  
 ***
