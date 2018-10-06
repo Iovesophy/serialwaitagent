@@ -36,6 +36,78 @@ ruby waitmaker.rb
 * RASPBIAN Version:June 2018 Release date:2018-06-27 Kernel version:4.14  
 で動作確認しました。
 
-生成できたプログラムは自身の環境に合わせてご自由にお使いください。
+生成後のプログラムは自身の環境に合わせてお使いください。
   
+## 生成例  
+
+パラメータ設定例  
+***
+このプログラム自身のステータスナンバーを入力してください、ただし、他のプログラムステータスナンバーと同じナンバーは使わないでください。  
+1  
+ステータスファイルを置くファイルパスをフルパスで入力してください。  
+/home/user/test/status.st  
+設定したい処理待ち時間を入力してください。  
+3  
+設定したい処理待ちトライ回数を入力してください。  
+6  
+実行ステータスを区分けしますか?(特別な理由が無ければ、区分けは必要ありません)y,n:  
+y  
+いくつ区分けしますか?  
+8  
+***
+### 上記パラメータによって生成されたコード  
+```python3
+# -*- coding: utf-8 -*-
+# serialwaitagentprocessor made by odenn --
+
+import serial
+import time
+
+class WaitAgent():
+
+    def my_status_set(self):
+        w_file = open('/home/user/test/status.st',mode='w')
+        w_file.write("1")
+        w_file.close()
+    def status_check(self):
+        for i in range(count):
+            r_file = open('/home/user/test/status.st')
+            r_status = r_file.read()
+            status = int(r_status)
+            if status == 1:
+                print("]My process.")
+                return True
+            elif status == 0:
+                print("]No process.")
+                return True
+            elif status == 2:
+                print("]2: process.")
+                time.sleep(3)
+            elif status == 3:
+                print("]3: process.")
+                time.sleep(3)
+            elif status == 4:
+                print("]4: process.")
+                time.sleep(3)
+            elif status == 5:
+                print("]5: process.")
+                time.sleep(3)
+            elif status == 6:
+                print("]6: process.")
+                time.sleep(3)
+            elif status == 7:
+                print("]7: process.")
+                time.sleep(3)
+            elif status == 8:
+                print("]8: process.")
+                time.sleep(3)
+            else:
+                print("]Else process.")
+                time.sleep(3)
+    def status_fin(self):
+        print("status_fin")
+        w_file = open('/home/user/test/status.st')
+        w_file.write("0")
+        w_file.close()
+```
 odenn.  
