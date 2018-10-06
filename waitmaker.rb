@@ -49,10 +49,14 @@ File.open("hinagata.py","w") do |code|
 	code.puts "                print(\"]No process.\")"
 	code.puts "                return True"
 if SEP == "y"
-    COUNT.times do |i|
-        code.puts "            elif status == i+3:"
-        code.puts "                print(\"]#{i+3}: process.\")"
-	code.puts "                time.sleep(#{WAIT})"
+    COUNT.to_i.times do |i|
+        if i+1 ==  MYSTATUS.to_i
+            puts "my status, pass."
+        else
+            code.puts "            elif status == #{i+1}:"
+            code.puts "                print(\"]#{i+1}: process.\")"
+	    code.puts "                time.sleep(#{WAIT})"
+        end
     end
 end  
 	code.puts "            else:"
@@ -65,5 +69,6 @@ end
 	code.puts "        w_file.close()"
 	code.puts ""
 end
-
-puts "コード生成完了しました。"
+puts "+++++++++++コード生成:"
+system("cat hinagata.py")
+puts "コード生成完了しました。コピーしてお使いください。"
