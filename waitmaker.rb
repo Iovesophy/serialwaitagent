@@ -16,12 +16,12 @@ puts "設定したい処理待ちトライ回数を入力してください。"
 TRY = gets.to_s.gsub(/(\r\n|\r|\n|\f)/,"")
 
 #区分け処理、細かい判定を行う際使用、（AgentMakerでは未実装）
-#puts "実行ステータスを区分けしますか?(特別な理由が無ければ、区分けは必要ありません)y,n:" 
-#SEP = gets.to_s.gsub(/(\r\n|\r|\n|\f)/,"")
-#if SEP == "y"
-#puts "いくつ区分けしますか?"
-#COUNT = gets.to_s.gsub(/(\r\n|\r|\n|\f)/,"")
-#end
+puts "実行ステータスを区分けしますか?(特別な理由が無ければ、区分けは必要ありません)y,n:" 
+SEP = gets.to_s.gsub(/(\r\n|\r|\n|\f)/,"")
+if SEP == "y"
+    puts "いくつ区分けしますか?"
+    COUNT = gets.to_s.gsub(/(\r\n|\r|\n|\f)/,"")
+end
 
 File.open("hinagata.py","w") do |code|
 
@@ -48,6 +48,13 @@ File.open("hinagata.py","w") do |code|
 	code.puts "            elif status == 0:"
 	code.puts "                print(\"]No process.\")"
 	code.puts "                return True"
+if SEP == "y"
+    COUNT.times do |i|
+        code.puts "            elif status == i+3:"
+        code.puts "                print(\"]#{i+3}: process.\")"
+	code.puts "                time.sleep(#{WAIT})"
+    end
+end  
 	code.puts "            else:"
 	code.puts "                print(\"]Else process.\")"
 	code.puts "                time.sleep(#{WAIT})"
