@@ -13,9 +13,9 @@ python3系で実行可能です。
 * 判定のトライ回数  
 ***
 ## プログラム生成方法  
-あらかじめRubyをインストールする必要があります。  
+あらかじめRubyをインストールしておいてください。 ( https://www.ruby-lang.org/ja/ )
 ```
-ruby waitmaker.rb  
+$ ruby waitmaker.rb  
 ```
 上記コマンドを実行し、アナウンスに従って設定してください。  
 ***
@@ -110,4 +110,4 @@ class WaitAgent():
         w_file.write("0")
         w_file.close()
 ```
-odenn.  
+Copywrite odenn.  
