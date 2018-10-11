@@ -1,7 +1,8 @@
 # serialwaitagent  
 Serial communication agent program.  
 
-このプログラムはシリアル通信可能なコンピュータ(Raspberry PiとArduino UNOで検証済み)へ通信を複数のプログラムから実行時、衝突回避を行うプログラムです。  
+このプログラムはシリアル通信可能なコンピュータへの通信を複数のプログラムから実行する際、衝突回避を行うプログラムです。  
+(Raspberry PiとArduino UNOで検証済み)
 python3系で実行可能です。  
 
 ユーザの必要に応じて自由にカスタムしたコードを生成することができます。  
